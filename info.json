@@ -1,0 +1,47 @@
+{
+    "identifier": "com.openrouter.bob.ocr",
+    "version": "0.1.0",
+    "category": "ocr",
+    "name": "OpenRouter OCR",
+    "summary": "通过 OpenRouter 调用视觉模型（默认 baidu/qianfan-ocr-fast:free）进行图片 OCR 识别。",
+    "icon": "",
+    "author": "jovi",
+    "homepage": "https://github.com/jovidalao/bob-plugin-openrouter-ocr",
+    "appcast": "",
+    "minBobVersion": "1.6.0",
+    "options": [
+        {
+            "identifier": "apiKey",
+            "type": "text",
+            "title": "API Key",
+            "desc": "在 https://openrouter.ai/keys 获取 OpenRouter API Key",
+            "textConfig": {
+                "type": "secure"
+            }
+        },
+        {
+            "identifier": "model",
+            "type": "text",
+            "title": "模型",
+            "defaultValue": "baidu/qianfan-ocr-fast:free",
+            "desc": "OpenRouter 上的视觉模型 ID，例如 baidu/qianfan-ocr-fast:free",
+            "textConfig": {
+                "type": "visible",
+                "height": 100,
+                "placeholderText": "baidu/qianfan-ocr-fast:free"
+            }
+        },
+        {
+            "identifier": "prompt",
+            "type": "text",
+            "title": "Prompt",
+            "defaultValue": "请提取图片中的所有文字。仅输出识别到的纯文本内容，按原始的段落与换行顺序排列，不要添加任何解释、说明或 Markdown 格式。",
+            "desc": "传递给模型的提示词",
+            "textConfig": {
+                "type": "visible",
+                "height": 100,
+                "placeholderText": "请提取图片中的所有文字..."
+            }
+        }
+    ]
+}
